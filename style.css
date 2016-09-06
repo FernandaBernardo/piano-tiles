@@ -7,6 +7,34 @@ body {
 	counter-reset: points;
 }
 
+.piano input[name='start'] {
+	display: none;
+}
+
+.piano label[for='start'] {
+	width: 400px;
+	height: 100vh;
+	background-color: pink;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.piano label[for='start']:before {
+	content: 'Para jogar clique em qualquer lugar';
+	vertical-align: middle;
+	text-align: center;
+	display: block;
+	font-size: 2em;
+	padding: 3em 1em;
+	margin: 0 auto;
+}
+
+.piano input[name='start']:checked + label {
+	display: none;
+}
+
 .game {
 	background-color: #fff;
 	width: 400px;
@@ -45,18 +73,28 @@ input.target-key:checked {
 	counter-increment: points;
 }
 
-input[name='tecla-c'].target-key:checked ~ label {
+input[name='tecla-d'].target-key:checked ~ label {
 	transform: translateY(25vh);
 }
 
-input[name='tecla-b'].target-key:checked ~ input[name='tecla-c'].target-key:checked ~ label {
+input[name='tecla-c'].target-key:checked ~ input[name='tecla-d'].target-key:checked ~ label {
 	transform: translateY(50vh);
 }
 
-input[name='tecla-a'].target-key:checked ~ input[name='tecla-b'].target-key:checked ~ input[name='tecla-c'].target-key:checked ~ label {
+input[name='tecla-b'].target-key:checked ~ input[name='tecla-c'].target-key:checked ~ input[name='tecla-d'].target-key:checked ~ label {
 	transform: translateY(75vh);
+}
+
+input[name='tecla-a'].target-key:checked ~ input[name='tecla-b'].target-key:checked ~ input[name='tecla-c'].target-key:checked ~ input[name='tecla-d'].target-key:checked ~ label {
+	transform: translateY(100vh);
 }
 
 .game:after {
 	content: 'Pontuação: ' counter(points);
+	background-color: #eff;
+	box-shadow: 1px 1px 1px #ccc;
+	padding: 0.5em 1em;
+	text-align: center;
+	font-size: 1.2em;
+	position: absolute;
 }
