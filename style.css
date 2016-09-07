@@ -64,10 +64,17 @@ input.target-key:checked {
 	counter-increment: points;
 }
 
-input[name='tecla-d'].target-key:checked ~ label[for^='tecla-d'].target-key,
-input[name='tecla-c'].target-key:checked ~ label[for^='tecla-c'].target-key,
-input[name='tecla-b'].target-key:checked ~ label[for^='tecla-b'].target-key,
-input[name='tecla-a'].target-key:checked ~ label[for^='tecla-a'].target-key {
+input[name='tecla-d']:not(.target-key):checked ~ label[for^='tecla-d'],
+input[name='tecla-c']:not(.target-key):checked ~ label[for^='tecla-c'],
+input[name='tecla-b']:not(.target-key):checked ~ label[for^='tecla-b'],
+input[name='tecla-a']:not(.target-key):checked ~ label[for^='tecla-a'] {
+	background-color: red;
+}
+
+.piano input[name='tecla-d'].target-key:checked ~ label[for^='tecla-d'].target-key,
+.piano input[name='tecla-c'].target-key:checked ~ label[for^='tecla-c'].target-key,
+.piano input[name='tecla-b'].target-key:checked ~ label[for^='tecla-b'].target-key,
+.piano input[name='tecla-a'].target-key:checked ~ label[for^='tecla-a'].target-key {
 	background-color: #ccc;
 }
 
