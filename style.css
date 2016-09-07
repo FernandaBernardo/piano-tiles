@@ -53,7 +53,7 @@ body {
 	width: 100px;
 	height: 25vh;
 	border: 1px solid #000;
-	transition: transform 0.5s ease-in;
+	transition: all 0.5s ease-in;
 }
 
 label.target-key {
@@ -62,6 +62,13 @@ label.target-key {
 
 input.target-key:checked {
 	counter-increment: points;
+}
+
+input[name='tecla-d'].target-key:checked ~ label[for^='tecla-d'].target-key,
+input[name='tecla-c'].target-key:checked ~ label[for^='tecla-c'].target-key,
+input[name='tecla-b'].target-key:checked ~ label[for^='tecla-b'].target-key,
+input[name='tecla-a'].target-key:checked ~ label[for^='tecla-a'].target-key {
+	background-color: #ccc;
 }
 
 input[name='tecla-d'].target-key:checked ~ label {
