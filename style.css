@@ -69,6 +69,7 @@ input[name='tecla-c']:not(.target-key):checked ~ label[for^='tecla-c'],
 input[name='tecla-b']:not(.target-key):checked ~ label[for^='tecla-b'],
 input[name='tecla-a']:not(.target-key):checked ~ label[for^='tecla-a'] {
 	background-color: red;
+	pointer-events: none;
 }
 
 .piano input[name='tecla-d'].target-key:checked ~ label[for^='tecla-d'].target-key,
