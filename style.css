@@ -17,12 +17,12 @@ body {
 }
 
 .piano .cover-start {
-	height: calc(100vh - 25vh);
+	height: 175vh;
 	top: 0;
 }
 
 .piano .cover-end {
-	height: calc(25vh);
+	height: 25vh;
 	bottom: 0;
 }
 
@@ -70,6 +70,10 @@ input.target-key:checked {
 	counter-increment: points;
 }
 
+input[name='tecla-h']:not(.target-key):checked ~ label[for^='tecla-h'],
+input[name='tecla-g']:not(.target-key):checked ~ label[for^='tecla-g'],
+input[name='tecla-f']:not(.target-key):checked ~ label[for^='tecla-f'],
+input[name='tecla-e']:not(.target-key):checked ~ label[for^='tecla-e'],
 input[name='tecla-d']:not(.target-key):checked ~ label[for^='tecla-d'],
 input[name='tecla-c']:not(.target-key):checked ~ label[for^='tecla-c'],
 input[name='tecla-b']:not(.target-key):checked ~ label[for^='tecla-b'],
@@ -78,6 +82,10 @@ input[name='tecla-a']:not(.target-key):checked ~ label[for^='tecla-a'] {
 	pointer-events: none;
 }
 
+.piano input[name='tecla-h'].target-key:checked ~ label[for^='tecla-h'].target-key,
+.piano input[name='tecla-g'].target-key:checked ~ label[for^='tecla-g'].target-key,
+.piano input[name='tecla-f'].target-key:checked ~ label[for^='tecla-f'].target-key,
+.piano input[name='tecla-e'].target-key:checked ~ label[for^='tecla-e'].target-key,
 .piano input[name='tecla-d'].target-key:checked ~ label[for^='tecla-d'].target-key,
 .piano input[name='tecla-c'].target-key:checked ~ label[for^='tecla-c'].target-key,
 .piano input[name='tecla-b'].target-key:checked ~ label[for^='tecla-b'].target-key,
@@ -85,24 +93,44 @@ input[name='tecla-a']:not(.target-key):checked ~ label[for^='tecla-a'] {
 	background-color: #ccc;
 }
 
-input[name='tecla-d'].target-key:checked ~ label {
+input[name='tecla-h'].target-key:checked ~ label {
 	-webkit-transform: translateY(25vh);
 	        transform: translateY(25vh);
 }
 
-input[name='tecla-c'].target-key:checked ~ input[name='tecla-d'].target-key:checked ~ label {
+input[name='tecla-g'].target-key:checked ~ input[name='tecla-h'].target-key:checked ~ label {
 	-webkit-transform: translateY(50vh);
 	        transform: translateY(50vh);
 }
 
-input[name='tecla-b'].target-key:checked ~ input[name='tecla-c'].target-key:checked ~ input[name='tecla-d'].target-key:checked ~ label {
+input[name='tecla-f'].target-key:checked ~ input[name='tecla-g'].target-key:checked ~ input[name='tecla-h'].target-key:checked ~ label {
 	-webkit-transform: translateY(75vh);
 	        transform: translateY(75vh);
 }
 
-input[name='tecla-a'].target-key:checked ~ input[name='tecla-b'].target-key:checked ~ input[name='tecla-c'].target-key:checked ~ input[name='tecla-d'].target-key:checked ~ label {
+input[name='tecla-e'].target-key:checked ~ input[name='tecla-f'].target-key:checked ~ input[name='tecla-g'].target-key:checked ~ input[name='tecla-h'].target-key:checked ~ label {
 	-webkit-transform: translateY(100vh);
 	        transform: translateY(100vh);
+}
+
+input[name='tecla-d'].target-key:checked ~ input[name='tecla-e'].target-key:checked ~ input[name='tecla-f'].target-key:checked ~ input[name='tecla-g'].target-key:checked ~ input[name='tecla-h'].target-key:checked ~ label {
+	-webkit-transform: translateY(125vh);
+	        transform: translateY(125vh);
+}
+
+input[name='tecla-c'].target-key:checked ~ input[name='tecla-d'].target-key:checked ~ input[name='tecla-e'].target-key:checked ~ input[name='tecla-f'].target-key:checked ~ input[name='tecla-g'].target-key:checked ~ input[name='tecla-h'].target-key:checked ~ label {
+	-webkit-transform: translateY(150vh);
+	        transform: translateY(150vh);
+}
+
+input[name='tecla-b'].target-key:checked ~ input[name='tecla-c'].target-key:checked ~ input[name='tecla-d'].target-key:checked ~ input[name='tecla-e'].target-key:checked ~ input[name='tecla-f'].target-key:checked ~ input[name='tecla-g'].target-key:checked ~ input[name='tecla-h'].target-key:checked ~ label {
+	-webkit-transform: translateY(175vh);
+	        transform: translateY(175vh);
+}
+
+input[name='tecla-a'].target-key:checked ~ input[name='tecla-b'].target-key:checked ~ input[name='tecla-c'].target-key:checked ~ input[name='tecla-d'].target-key:checked ~ input[name='tecla-e'].target-key:checked ~ input[name='tecla-f'].target-key:checked ~ input[name='tecla-g'].target-key:checked ~ input[name='tecla-h'].target-key:checked ~ label {
+	-webkit-transform: translateY(200vh);
+	        transform: translateY(200vh);
 }
 
 .game:after {
