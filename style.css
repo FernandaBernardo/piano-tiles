@@ -28,7 +28,7 @@ body {
 
 .game {
 	background-color: #fff;
-	width: 400px;
+	width: 40vw;
 	height: 100vh;
 	border: 2px solid #fff;
 	margin: 0 auto;
@@ -55,7 +55,7 @@ body {
 	-webkit-box-flex: 1;
 	    -ms-flex: 1 25%;
 	        flex: 1 25%;
-	width: 100px;
+	width: 10vw;
 	height: 25vh;
 	border: 1px solid #000;
 	-webkit-transition: all 0.5s ease-in;
